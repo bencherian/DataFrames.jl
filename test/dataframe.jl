@@ -124,7 +124,7 @@ module TestDataFrame
     @test allna(df[:, 2])
     @test allna(df[:, 3])
 
-    df = DataFrame(Any[Int, Float64, ASCIIString], [:A, :B, :C], 100)
+    df = DataFrame(DataType[Int, Float64, ASCIIString], [:A, :B, :C], 100)
     @test size(df, 1) == 100
     @test size(df, 2) == 3
     @test typeof(df[:, 1]) == DataVector{Int}
